@@ -3,8 +3,10 @@ use thiserror::Error;
 
 #[derive(Debug, PartialEq)]
 pub struct Reading {
-    temperature: f32,
-    humidity: f32,
+    /// Temperature in degrees Celsius. Range: -41.0 to 81.0.
+    pub temperature: f32,
+    /// Relative humidity. Range: 0.0 to 99.0.
+    pub humidity: f32,
 }
 
 #[derive(Error, Debug, PartialEq)]
